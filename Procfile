@@ -1,1 +1,1 @@
-worker: python MONIKA_BOT
+worker: python MONIKA_BOT.py
