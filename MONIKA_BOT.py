@@ -8,8 +8,8 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton, ChatPermis
 # ==========================================
 # --- YOUR BOT CONFIGURATION ---
 # ==========================================
-BOT_TOKEN = '8655735666:AAHmPn73EtSp4ybcYppSmBIs3euPkS_X4I0'
-BOT_USERNAME = 'MONA_SECURITY_BOT'
+BOT_TOKEN = '8609352944:AAFl3Fyk4CsaLLXjy1b4Pq04I7aMu-3zHZI'
+BOT_USERNAME = 'SWIGGY_SECURITY_BOT'
 CHANNEL_USERNAME = '@swiggytrick'
 ADMIN_PASSWORD = 'MONIKA_BOT'
 
@@ -320,7 +320,7 @@ def group_scanner(message):
                 f"**Action:** Muted 🔇 until {unmute_time_str}."
             )
 
-            # Added disable_web_page_preview=True right here 👇
+            # Added disable_web_page_preview=True to keep it clean
             msg = bot.send_message(chat_id, msg_text, reply_markup=markup, parse_mode='Markdown', disable_web_page_preview=True)
             threading.Timer(WARNING_TIMEOUT, auto_delete_message, args=[chat_id, msg.message_id]).start()
     except Exception as e:
@@ -351,3 +351,4 @@ except: pass
 print("✅ Mona Security Bot is ONLINE.")
 # This line keeps the bot alive and ignores timeout errors
 bot.infinity_polling(timeout=10, long_polling_timeout=5)
+            
